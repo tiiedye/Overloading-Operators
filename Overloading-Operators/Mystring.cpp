@@ -135,7 +135,7 @@ bool Mystring::operator<(const Mystring &rhs) const {
 bool Mystring::operator>(const Mystring &rhs) const {
     if (std::strcmp(str, rhs.str) > 0) {
         return true;
-    } else{
+    } else {
         return false;
     }
 }

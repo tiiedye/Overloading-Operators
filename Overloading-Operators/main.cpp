@@ -7,56 +7,56 @@ int main() {
     
     cout << boolalpha << endl;
     Mystring a {"jace"};
-    Mystring b {"frank"};
+    Mystring b {"jace"};
 
-    cout << "Should print true: " << (a==b) << endl;         // true
-    cout << "Should print false: " << (a!=b) << endl;          // false
+    cout << "Should print true: " << (a==b) << endl;
+    cout << "Should print false: " << (a!=b) << endl;
     
     b = "george";
-    cout << "Should print false: " << (a==b) << endl;         // false
-    cout << "Should print true: " << (a!=b) << endl;          // true
-	cout << "Should print true: " << (a<b) << endl;          // true
-    cout << "Should print false: " << (a>b) << endl;           // false
+    cout << "Should print false: " << (a==b) << endl;
+    cout << "Should print true: " << (a!=b) << endl;
+	cout << "Should print false: " << (a<b) << endl;
+    cout << "Should print true: " << (a>b) << endl;
     
-    Mystring s1 {"FRANK"};
+    Mystring s1 {"JACE"};
     s1 = -s1;       
-    cout << "Should print frank: " << s1 << endl;               // frank              
+    cout << "Should print jace: " << s1 << endl;              
 
     s1 = s1 + "*****";
-    cout << "Should print frank*****: " << s1 << endl;               // frank*****       
+    cout << "Should print jace*****: " << s1 << endl;       
     
-    s1 += "-----";                        // frank*****-----
-    cout << "Should print frank*****-----: " << s1 << endl;
+    s1 += "-----";
+    cout << "Should print jace*****-----: " << s1 << endl;
     
     Mystring s2{"12345"};
     s1 = s2 * 3;
-    cout << "Should print 123451234512345: " << s1 << endl;              // 123451234512345
+    cout << "Should print 123451234512345: " << s1 << endl;
     
     Mystring s3{"abcdef"};  
     s3 *= 5;
-    cout << "Should print abcdefabcdefabcdefabcdefabcdef: " << s3 << endl;             // abcdefabcdefabcdefabcdefabcdef
+    cout << "Should print abcdefabcdefabcdefabcdefabcdef: " << s3 << endl;
     
-    Mystring s = "Frank";
+    Mystring s = "Jace";
     ++s;
-    cout << "Should print FRANK: " << s << endl;                  // FRANK
+    cout << "Should print JACE: " << s << endl;
     
     s = -s; 
-    cout << "Should print frank: " << s << endl;                  // frank
+    cout << "Should print jace: " << s << endl;
     
     Mystring result;
     result = ++s;                           
-    cout << "Should print FRANK: " << s << endl;                  // FRANK
-    cout << "Should print FRANK: " << result << endl;           // FRANK
+    cout << "Should print JACE: " << s << endl;
+    cout << "Should print JACE: " << result << endl;
     
-    s = "Frank";
+    s = "Jace";
     s++;
-    cout << "Should print FRANK: " << s << endl;                  // FRANK
+    cout << "Should print JACE: " << s << endl;
     
     s = -s;
-    cout << "Should print frank: " << s << endl;                  // frank
+    cout << "Should print jace: " << s << endl;
     result = s++;
-    cout << "Should print FRANK: " << s << endl;                  // FRANK
-    cout << "Should print frank: " << result << endl;           // frank
+    cout << "Should print JACE: " << s << endl;
+    cout << "Should print jace: " << result << endl;
     
     return 0;
 }
