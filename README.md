@@ -1,7 +1,7 @@
 ![made-with-CodeLite](https://img.shields.io/badge/Made%20With-CodeLite-green)  ![Using-CPlusPlus](https://img.shields.io/badge/Using-C%2B%2B-ff69b4)
 
 # Overloading Operators
-...
+Practice overloading operators using MEMBER METHODS.
 
 <img src="./assets/screenshot.png"
      alt="Img"
