@@ -90,3 +90,7 @@ std::istream &operator>>(std::istream &in, Mystring &rhs) {
     return in;
 }
 
+// Your Definitions here!!
+
+// Unary minus, to lower
+
