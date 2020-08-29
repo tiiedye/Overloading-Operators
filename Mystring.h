@@ -12,7 +12,7 @@ public:
     Mystring(); // No-args constructor
     Mystring(const char *s);    // Overloaded constructor
     Mystring(const Mystring &source);   // Copy constructor
-    Mystring( Mystring &&source);   // Move constructor
+    Mystring(Mystring &&source);   // Move constructor
     ~Mystring();    // Destructor
     
     Mystring &operator=(const Mystring &rhs);   // Copy assignment
@@ -22,6 +22,19 @@ public:
     
     int get_length() const; // getters
     const char *get_str() const;
+
+    // Your Overloaded Operator Methods here!!
+    Mystring operator-();
+    bool operator==(const Mystring &rhs) const;
+    bool operator!=(const Mystring &rhs) const;
+    bool operator<(const Mystring &rhs) const;
+    bool operator>(const Mystring &rhs) const;
+    Mystring operator+(const Mysting &rhs) const;
+    Mystring operator+=(const Mysting &rhs);
+    Mystring operator*(int n) const;
+    Mystring operator*=(int n);
+    Mystring operator++();
+    Mystring operator++(int);
 };
 
 #endif // _MYSTRING_H_

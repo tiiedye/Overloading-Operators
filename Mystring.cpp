@@ -93,4 +93,99 @@ std::istream &operator>>(std::istream &in, Mystring &rhs) {
 // Your Definitions here!!
 
 // Unary minus, to lower
+Mystring Mystring::operator-() {
+    char *buff = new char[std::strlen(str) +1];
+    std::strcpy(buff, str);
+    for (size_t i=0; i < std::strlen(buff); i++) {
+        buff[i] = std::tolower(buff[i]);
+    }
+    Mystring temp {buff};
+    delete [] buff;
+    return temp;
+}
 
+// check if equal
+bool Mystring::operator==(const Mysting &rhs) const {
+    if (std::strcmp(str, rhs.str) == 0) {
+        return true;
+    } else{
+        return fals;
+    }
+}
+
+// check for not equal
+bool Mystring::operator!=(const Mysting &rhs) const {
+    if (std::strcmp(str, rhs.str) != 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// check for less than
+bool Mystring::operator<(const Mystring &rhs) const {
+    if (std::strcmp(str, rhs.str) < 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// check for greater than
+bool Mystring::operator>(const Mystring &rhs) const {
+    if (std::strcmp(str, rhs.str) > 0) {
+        return true;
+    } else{
+        return false;
+    }
+}
+
+// concatenate
+Mystring Mystring::operator+(const Mystring &rhs) const {
+    char *buff = new char[std::strlen(str) + std::strlen(rhs.str) +1];
+    std::strcpy(buff, str);
+    std::strcat(buff, rhs.str);
+    Mystring temp {buff};
+    delete [] buff;
+    return temp;
+}
+
+// concatenate and assign
+Mystring Mystring::operator+=(const Mystring &rhs) {
+    *this = *this + rhs;
+    return *this;
+}
+
+// repeat
+Mystring Mystring::operator*(int n) const {
+    size_t buff_size = (std::strlen(str) * n) + 1;
+    char *buff = new char[buff_size];
+    std::strcpy(buff, "");
+    for (i=0; i < n; i++) {
+        std::strcat(buff, str);
+    }
+    Mystring temp {buff};
+    delete [] buff;
+    return temp;
+}
+
+// repeat and assign
+Mystring Mystring::operator*=(int n) {
+    *this = *this + n;
+    return *this;
+}
+
+// pre-increment - make the string uppercase
+Mysting Mysting::operator++() {
+    for (size_t i=0; i < std::strlen(str); i++) {
+        str[i] = std::toupper(str[i]);
+    }
+    return *this;
+}
+
+// post-increment - make string uppercase
+Mystring Mystring::operator++(int) {
+    Mystring temp(*this);
+    operator++();
+    return temp;
+}
